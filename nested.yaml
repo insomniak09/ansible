@@ -1,0 +1,10 @@
+---
+- hosts: 35.181.58.249
+  tasks: 
+  - name: execute echo command
+    debug: msg=" ansible {{ item[0] }} on day {{ item[1] }} was {{ item[2] }}"
+    register: output
+    with_nested:
+    - [ training, lab, handson ]
+    - [ 1, 2, 3 ]
+    - [ good, bad, great ]

@@ -1,0 +1,24 @@
+---
+- hosts: 35.180.35.227
+  become: yes
+  tasks:
+  - name: install mariadb server
+    yum: 
+      name=mariadb-server
+      state=latest
+    tags:
+    - install
+    - all
+  - name: start mariadb
+    service:
+      name=mariadb
+      state=started
+    tags:
+    - start
+    - all
+  - name: add user
+    user:
+      name: taguser
+    tags:
+    - all
+    - user
