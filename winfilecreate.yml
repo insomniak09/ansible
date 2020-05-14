@@ -3,5 +3,5 @@
   tasks:
   - name: create directory on windows
     win_file:
-      path: 'c:\temp'
+      path: 'c:\temp\test'
       state: directory
