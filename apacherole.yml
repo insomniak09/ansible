@@ -1,5 +1,5 @@
 ---
-- hosts: 35.180.253.239
+- hosts: centos
   become: yes
   roles:
   - apache
